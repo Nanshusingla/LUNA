@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/static/LUNA-removebg-preview.png">
+    <title>LUNA - SafeSteps</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="/static/LUNA-removebg-preview.png" alt="LUNA Logo" class="logo-img">
+        <span>LUNA</span>
+    </div>
+
+    <div class="status-indicator" id='status-indicator'>
+        <span class="status-dot"></span>
+        <span class="status-text" id="status">Safe</span>
+    </div>
+</header>
+
+
+<div class="main-container">
+
+    <div class="card">
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>LUNA - SafeSteps</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6a4c93">
+</head>
+
+<body>
+    
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Safety Dashboard</h1>
+                <p class="subtitle">Your safety companion, always here</p>
+            </div>
+
+            <!-- Emergency Panic Button (Prominent) -->
+            <button onclick="sendSOS()" class="panic-btn emergency-large">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>EMERGENCY SOS</span>
+            </button>
+
+            <!-- Primary Actions -->
+            <div class="button-grid">
+                <button onclick="triggerFakeCall()" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Fake Call</span>
+                </button>
+
+                <button onclick="findHelpPole()" class="action-btn location-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nearest Help Phone</span>
+                </button>
+            </div>
+
+            <!-- Secondary Actions -->
+            <div class="secondary-actions">
+                <button onclick="stopAlarm()" class="secondary-btn stop-btn" id="stopAlarmBtn" style="display:none;">
+                    <i class="fas fa-stop-circle"></i>
+                    Stop Alarm
+                </button>
+                <button onclick="window.open('https://arcg.is/0iqSfm0', '_blank')" class="purp secondary-btn">
+                Open Map
+                </button>
+                <button onclick="shareLocation()" class="secondary-btn share-btn">
+                    <i class="fas fa-share-alt"></i>
+                    Share Location
+                </button>
+                
+            </div>
+
+            <!-- Result Display -->
+            <div id="result" class="result-box"></div>
+
+            <!-- Audio Element -->
+            <audio id="alarmAudio" src="/static/alarm.mp3" preload="auto" muted loop></audio>
+        </div>
+
+        <!-- Quick Tips Section -->
+        <div class="tips-card">
+            <h3><i class="fas fa-lightbulb"></i> Safety Tips</h3>
+            <ul>
+                <li>Trust your instincts</li>
+                <li>Stay in well-lit areas</li>
+                <li>Share your location with friends</li>
+            </ul>
+        </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Locating...</p>
+    </div>
+    <br>
+    <script src="{{ url_for('static', filename='/script.js') }}"></script>
+        <div class="card">
+        <!-- TIMER -->
+    <button onclick="startTimer(1)" class="invert secondary-btn">
+        Start 1 min Timer
+    </button>
+    <br>
+    <button onclick="cancelTimer()" class="secondary-btn">
+        Cancel Timer
+    </button>
+
+    <!-- Timer Remaining Display -->
+    <div id="timerStatus" class="result-box"></div>
+    <br>
+    <!-- Result Display (ONLY ONE) -->
+    <div id="result" class="result-box"></div>
+
+
+
+<!-- Emergency Contacts -->
+
+    <div class="card">
+  <h3 style="margin-bottom:8px;">Emergency Contacts (Email)</h3>
+
+  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+    <input id="cName" placeholder="Name" style="padding:10px; border-radius:10px; border:1px solid #ddd;">
+    <input id="cEmail" placeholder="Email" style="padding:10px; border-radius:10px; border:1px solid #ddd; min-width:260px;">
+    <button onclick="addContact()" class="purp">Add</button>
+  </div>
+
+  <div id="contactsList" style="margin-top:10px;"></div>
+
+  <button onclick="saveContacts()" class="secondary-btn" style="margin-top:10px;">
+    Save Contacts
+  </button>
+  </div>
+</div>
+
+
+
+
+<!-- IMPORTANT -->
+<script src="/static/script.js"></script>
+
+
+</body>
+</html>
+
+

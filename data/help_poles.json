@@ -1,0 +1,17 @@
+[
+  {"name": "Bartlett East", "lat": 42.38807, "lng": -72.527782},
+  {"name": "Gordon Hall", "lat": 42.398927, "lng": -72.524022},
+  {"name": "Photo Lab", "lat": 42.39035, "lng": -72.530458},
+  {"name": "ELAB II South", "lat": 42.393958, "lng": -72.530832},
+  {"name": "Campus Center Parking", "lat": 42.391353, "lng": -72.529482},
+  {"name": "Stadium Road", "lat": 42.379914, "lng": -72.533986},
+  {"name": "Olympia Drive Stanchion", "lat": 42.395276, "lng": -72.513225},
+  {"name": "Observatory", "lat": 42.394645, "lng": -72.520318},
+  {"name": "Brett House", "lat": 42.389724, "lng": -72.521374},
+  {"name": "Butterfield House", "lat": 42.388508, "lng": -72.518001},
+  {"name": "Cashin House", "lat": 42.397357, "lng": -72.521641},
+  {"name": "Coolidge Tower", "lat": 42.383851, "lng": -72.529943},
+  {"name": "Dickinson House", "lat": 42.392142, "lng": -72.519707},
+  {"name": "Hamlin House", "lat": 42.394877, "lng": -72.526477},
+  {"name": "John Q Adams Tower", "lat": 42.382234, "lng": -72.529288}
+]

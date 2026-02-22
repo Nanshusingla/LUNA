@@ -1,0 +1,448 @@
+:root {
+    --primary: #6a4c93;
+    --secondary: #ffafcc;
+    --danger: #ff006e;
+    --success: #06ffa5;
+    --warning: #ffbe0b;
+    --bg-gradient-1: #ffd6e0;
+    --bg-gradient-2: #cdb4db;
+    --text-dark: #2b2d42;
+    --text-light: #8d99ae;
+    --white: #ffffff;
+    --shadow: rgba(106, 76, 147, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2));
+    min-height: 100vh;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--primary), #8e6bb7);
+    color: var(--white);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo i {
+    font-size: 28px;
+}
+
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    animation: logoFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes logoFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-5px) rotate(2deg);
+    }
+}
+
+.logo span {
+    font-weight: 700;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--success);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.status-text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Card */
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px var(--shadow);
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-header h1 {
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Emergency Panic Button */
+.emergency-large {
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(135deg, var(--danger), #c9184a);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(255, 0, 110, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.emergency-large i {
+    font-size: 28px;
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.emergency-large:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(255, 0, 110, 0.4);
+}
+
+.emergency-large:active {
+    transform: scale(0.98);
+}
+
+/* Button Grid */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn i {
+    font-size: 28px;
+}
+
+.call-btn {
+    background: linear-gradient(135deg, #06ffa5, #00cc88);
+}
+
+.location-btn {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+/* Secondary Actions */
+.secondary-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.secondary-btn {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--secondary);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+    border-color: var(--secondary);
+}
+
+.stop-btn {
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.stop-btn:hover {
+    background: var(--danger);
+    color: var(--white);
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-left: 4px solid var(--primary);
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.result-box:not(:empty) {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Tips Card */
+.tips-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.tips-card h3 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tips-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tips-card li {
+    padding: 10px 0;
+    color: var(--text-dark);
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tips-card li:last-child {
+    border-bottom: none;
+}
+
+.tips-card li:before {
+    content: "✓";
+    color: var(--success);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    color: var(--white);
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.error {
+    color: var(--danger);
+    background: rgba(255, 0, 110, 0.1);
+    border-left-color: var(--danger);
+}
+
+.success {
+    color: var(--success);
+    background: rgba(6, 255, 165, 0.1);
+    border-left-color: var(--success);
+}
+
+.invert {
+    background-color: #ffafcc;
+    color: #ffffff;
+}
+
+.invert:hover {
+    background-color: #ffffff;
+    color: #6a4c93;
+}
+
+.purp {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ffafcc;
+    background-color: #6a4c93;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.purp:hover {
+    background-color: #ffffff;
+    color: #6a4c93;
+}

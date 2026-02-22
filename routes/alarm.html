@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alarm</title>
+</head>
+<body>
+  <h2>Alarm</h2>
+
+  <button onclick="startAlarm()">Start Alarm</button>
+  <button onclick="stopAlarm()">Stop Alarm</button>
+
+  <audio id="alarm" src="/static/alarm.mp3" loop preload="auto"></audio>
+
+  <script>
+    const alarm = document.getElementById("alarm");
+
+    async function startAlarm() {
+      alarm.currentTime = 0;
+      try {
+        await alarm.play();
+      } catch (e) {
+        console.log(e);
+        alert("browser blocked the sound. (check the sound setting)");
+      }
+    }
+
+    function stopAlarm() {
+      alarm.pause();
+      alarm.currentTime = 0;
+    }
+  </script>
+</body>
+</html>
