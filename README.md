@@ -1,2 +1,2 @@
 # LUNA
-Locate Unite Notify Alert
+(L)ocate (U)nite (N)otify (A)lert
